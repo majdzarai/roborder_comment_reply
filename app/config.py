@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 
@@ -6,7 +7,7 @@ class Settings(BaseSettings):
     """Application configuration loaded from environment variables."""
 
     # Anthropic API
-    anthropic_api_key: str
+    anthropic_api_key: Optional[str] = None
 
     # Client API Keys (comma-separated for multiple clients)
     api_keys: str = ""  # e.g., "roborder_key_abc123,client2_key_xyz789"
