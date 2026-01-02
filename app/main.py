@@ -89,11 +89,16 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# Configure CORS
-settings = get_settings()
+# Configure CORS (use defaults if settings fail during import)
+try:
+    _cors_settings = get_settings()
+    _allowed_origins = _cors_settings.allowed_origins.split(",")
+except Exception:
+    _allowed_origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.allowed_origins.split(","),
+    allow_origins=_allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
