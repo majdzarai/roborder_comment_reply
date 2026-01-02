@@ -1,0 +1,14 @@
+Analyze this Instagram post image and caption to create a concise summary for reply generation.
+
+CAPTION:
+{{CAPTION}}
+
+Provide a 1-2 sentence summary that captures:
+1. What product/service/content is shown
+2. Any visible prices, promotions, or key information
+3. The apparent purpose of the post (selling, informing, engaging)
+4. Any text overlays or important visual elements
+
+Be factual and specific. This summary will be used to generate contextual replies to comments.
+
+Output only the summary, nothing else.

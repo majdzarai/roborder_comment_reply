@@ -1,0 +1,11 @@
+Analyze this Instagram comment and determine the language:
+
+COMMENT: {{COMMENT_TEXT}}
+
+Respond with ONLY one of these codes:
+- "fr" for French
+- "en" for English
+- "ar" for Arabic (Modern Standard)
+- "tn" for Tunisian Arabic (Darija/Tounsi, often mixed with French)
+
+Output only the language code, nothing else.

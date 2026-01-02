@@ -1,0 +1,16 @@
+Evaluate this Instagram reply for quality and safety.
+
+ORIGINAL COMMENT: {{COMMENT_TEXT}}
+GENERATED REPLY: {{REPLY_TEXT}}
+
+Check for these issues:
+1. Does it mention AI, automation, or bots? (FAIL if yes)
+2. Does it contain links or hashtags? (FAIL if yes)
+3. Is it more than 2 sentences? (FAIL if yes)
+4. Does it sound robotic or templated? (FAIL if yes)
+5. Is it contextually appropriate? (FAIL if no)
+6. Does it match the comment's language? (FAIL if no)
+
+Respond with ONLY:
+- "PASS" if all checks pass
+- "FAIL: [reason]" if any check fails
