@@ -190,3 +190,17 @@ async def summarize_post(
 def root():
     return {"status": "ok", "service": "roborder_comment_reply"}
 
+
+if __name__ == "__main__":
+    import os
+    import uvicorn
+
+    port = int(os.environ.get("PORT", 8080))
+
+    uvicorn.run(
+        "app.main:app",
+        host="0.0.0.0",
+        port=port,
+    )
+
+
