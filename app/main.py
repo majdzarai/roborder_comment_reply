@@ -5,7 +5,7 @@ from fastapi import FastAPI, HTTPException, Depends, Security
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
-from config import get_settings, Settings
+from app.config import get_settings, Settings
 from app.models import (
     ReplyRequest,
     ReplyResponse,
@@ -188,6 +188,19 @@ async def summarize_post(
 
 @app.get("/")
 def root():
-    return {"status": "running"}
+    return {"status": "ok", "service": "roborder_comment_reply"}
+
+
+if __name__ == "__main__":
+    import os
+    import uvicorn
+
+    port = int(os.environ.get("PORT", 8080))
+
+    uvicorn.run(
+        "app.main:app",
+        host="0.0.0.0",
+        port=port,
+    )
 
 
