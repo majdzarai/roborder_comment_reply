@@ -186,9 +186,7 @@ async def summarize_post(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-if __name__ == "__main__":
-    import os
-    import uvicorn
+@app.get("/")
+def root():
+    return {"status": "ok", "service": "roborder_comment_reply"}
 
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
